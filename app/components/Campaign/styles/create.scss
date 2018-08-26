@@ -1,0 +1,72 @@
+.rectangle-copy {
+	height: 40px;
+	width: 6px;
+	border-radius: 5px;
+	background-color: rgba(222,113,202,0.5);
+}
+
+
+.ui.modal.create-campaign{
+  .ui.header{
+    font-size: 1em;
+    border: none;
+  }
+
+  .ui.horizontal.divider{
+    &:before{
+      background-position:right 1em top 0%;
+    }
+    &:after{
+      background-position:left 1em top 0%;
+    }
+    text-transform: none;
+  }
+  .suggested-template{
+    .campaigns-item {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      & > *{
+        display: flex;
+        align-items: center;
+      }
+      .campaigns-title {
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 18px;
+        .campaigns-color {
+          height: 40px;
+          width: 6px;
+          margin-right: 20px;
+          border-radius: 5px;
+          background-color: #E2E2E2;
+        }
+      }
+    }
+
+    .create-campaign{
+      .campaigns-item {
+        & > .ui.fluid.input{
+          flex: 1;
+          input{
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 2px solid #D6D6D6;
+            border-radius: 0;
+          }
+        }
+        width: 100% !important;
+        justify-content: left;
+        padding: 0 1em;
+      }
+    }
+    .category-color-picker{
+      button.ui.mini.compact.button.category-button-cell{
+        border-radius: 0;
+        padding: 2px 5px;
+        margin: 0 5px;
+      }
+    }
+
+  }
+}

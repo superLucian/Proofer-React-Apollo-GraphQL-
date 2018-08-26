@@ -1,0 +1,109 @@
+.content-editor {
+  position: relative;
+  min-height: 6em;
+  color: rgba(0,0,0,0.8);
+  background-color: #ffffff;
+  border-radius: 0.28571429rem;
+  box-shadow: 0em 0em 0em 0em transparent inset;
+  margin: 0;
+  font-size: 1em;
+  .public-DraftEditorPlaceholder-root {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 1em;
+    color: #aaa;
+  }
+  .draftJsHashtagPlugin__hashtag__1wMVC {
+    color: #5e93c5;
+  }
+  .DraftEditor-editorContainer {
+    padding: 0 2.5em 0 0em;
+  }
+  .public-DraftStyleDefault-block {
+    padding: 0.48571429em 0;
+  }
+  .content-editor-wrapper, .DraftEditor-root, .DraftEditor-editorContainer, .public-DraftEditor-content {
+    min-height: 6em;
+    height: 100%;
+  }
+  .attach-media {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 6px 6px 6px;
+    border-radius: 2px;
+    line-height: 1;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(74,219,145,0.1);
+      .icon.image {
+        color: #4ADB91;
+      }
+    }
+    .icon.image {
+      color: #C3C3C3;
+      margin: 0;
+    }
+  }
+}
+
+.emoji-picker {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  display: flex;
+  align-items: center;
+
+  .draftJsEmojiPlugin__emojiSelectButtonPressed__2Tezu {
+    z-index: 10;
+  }
+  button {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3em;
+  }
+  .draftJsEmojiPlugin__emojiSelectPopoverTitle__3tpXz {
+    padding-left: 0.5em;
+  }
+  .draftJsEmojiPlugin__emojiSelectPopoverGroupTitle__2pC51 {
+    margin: 1em 0 0.5em 0!important;
+    padding-left: 0!important;
+  }
+  .draftJsEmojiPlugin__emojiSelectPopover__1J1s0 {
+    right: 0;
+    z-index: 100;
+  }
+  .draftJsEmojiPlugin__emojiSelectPopoverGroup__3zwcE {
+    padding: 0!important;
+  }
+  .draftJsEmojiPlugin__emojiSelectPopoverGroups__35t9m {
+    width: 16em;
+    height: 15em;
+  }
+  .draftJsEmojiPlugin__emojiSelectPopoverNavItem__qydCX {
+    width: 2em;
+    height: 2em;
+  }
+  .draftJsEmojiPlugin__emojiSelectPopoverNav__1Nzd7 {
+    width: 16em;
+    padding: 0;
+    button {
+      font-size: 1.2em;
+    }
+  }
+  .draftJsEmojiPlugin__emojiSelectButton__3sPol, .draftJsEmojiPlugin__emojiSelectButtonPressed__2Tezu {
+    border: 0;
+    width: 1.2em;
+    height: 1.2em;
+    font-size: 1.5em;
+    background-color: transparent;
+    &:hover {
+      color: #5EC993;
+    }
+  }
+  .draftJsEmojiPlugin__emojiSelectPopoverGroupItem__2pFOS {
+    width: 2em;
+    height: 2em;
+  }
+}

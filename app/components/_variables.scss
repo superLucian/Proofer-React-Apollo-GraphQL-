@@ -1,0 +1,11 @@
+// All global variables should be defined in this file
+$vertical-menu : 60px;
+$sidebar-menu: 200px;
+$sidebar-compact: 50px;
+$sidebar-expand-btn: 20px;
+
+
+$sidebar-width: $sidebar-menu + $vertical-menu + $sidebar-expand-btn;
+$sidebar-width-compact: $sidebar-compact + $vertical-menu + $sidebar-expand-btn;
+
+$header-height: 80px;

@@ -1,0 +1,32 @@
+.unfollow-user {
+  .ui.image {
+    width: 40px;
+    height: 40px;
+    margin-right: 1em;
+  }
+  .user-name {
+    font-weight: bold;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  a {
+    color: inherit;
+  }
+  .screen-name {
+    margin-left: 10px;
+    display: inline-block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .ui.button {
+    font-family: Nunito Sans, sans-serif;
+    width: 75px;
+    &.success.empty.pending {
+      color: #D6D6D6;
+      border-color: #D6D6D6;
+    }
+  }
+}

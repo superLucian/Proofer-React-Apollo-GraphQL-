@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Full sun p2 Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="3.74939946e-31%" x2="1.11022302e-14%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F0864E" offset="0%"></stop>
+            <stop stop-color="#E84B5E" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="47.0125353%" x2="100%" y2="47.0125347%" id="linearGradient-2">
+            <stop stop-color="#F0864E" offset="0%"></stop>
+            <stop stop-color="#E84B5E" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbol/Night" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-14.000000, 0.000000)">
+        <g id="Full-sun-p2-Copy-2" transform="translate(27.000000, 11.500000) scale(-1, 1) translate(-27.000000, -11.500000) translate(15.000000, 0.000000)">
+            <path d="M14.856039,1.33352942 C20.0444845,2.30090548 23.9730923,6.67221385 23.9730923,11.902057 C23.9730923,17.8380599 18.9098717,22.6700001 12.6881822,22.6700001 C8.33542271,22.6700001 4.5490598,20.3049833 2.66705883,16.8514788 C3.36909822,16.9824429 4.09419074,17.0510806 4.83572128,17.0510806 C11.0574108,17.0510806 16.1206314,12.2191404 16.1206314,6.28313756 C16.1206314,4.4998003 15.6638291,2.81628992 14.856039,1.33352942 Z" id="Fill-126" stroke="url(#linearGradient-1)" stroke-width="2"></path>
+            <polygon id="Star" fill="url(#linearGradient-2)" points="10.0014706 7.00102944 8.82572724 7.61915431 9.05027424 6.30994481 8.09907786 5.38275749 9.41359893 5.1917464 10.0014706 4.00058825 10.5893423 5.1917464 11.9038634 5.38275749 10.952667 6.30994481 11.177214 7.61915431"></polygon>
+            <polygon id="Star-Copy" fill="url(#linearGradient-2)" points="4.66735296 12.3351471 3.49160957 12.953272 3.71615658 11.6440625 2.7649602 10.7168752 4.07948126 10.5258641 4.66735296 9.33470591 5.25522465 10.5258641 6.56974572 10.7168752 5.61854934 11.6440625 5.84309634 12.953272"></polygon>
+            <polygon id="Star-Copy-2" fill="url(#linearGradient-2)" points="2.66705883 4.00058825 1.09940098 4.82475475 1.39879699 3.07914208 0.130535151 1.84289233 1.88322991 1.58821087 2.66705883 0 3.45088776 1.58821087 5.20358251 1.84289233 3.93532067 3.07914208 4.23471668 4.82475475"></polygon>
+        </g>
+    </g>
+</svg>

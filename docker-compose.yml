@@ -1,0 +1,24 @@
+# Make sure to have "127.0.0.1 local.proofer.io" set in your hosts file.
+# Also make sure node dependencies are already installed before running.
+version: '2'
+
+services:
+  react:
+    container_name: react
+    build:
+      context: .
+      args:
+        nodeEnv: production
+        environment: development
+    extra_hosts:
+      - "staging.proofer.io:35.190.32.128"
+      - "acceptance.proofer.io:35.186.234.251"
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+      args:
+        environment: local
+    ports:
+      - 80:80
+

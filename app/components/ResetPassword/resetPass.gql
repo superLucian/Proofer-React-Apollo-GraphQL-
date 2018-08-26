@@ -1,0 +1,3 @@
+mutation changePasswordFromToken($input: PasswordResetFromTokenInput!) {
+  changePasswordFromToken(input: $input)
+}

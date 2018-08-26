@@ -1,0 +1,85 @@
+.no-auth-page {
+  $input-width: 80%;
+
+  background: #FCFDFF;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  #no-auth-container {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ui.form .field>label{
+    text-align: left;
+    font-size: 1em;
+  }
+  .ui.button.submit-button {
+    width: $input-width;
+    font-size:1.072em;
+    padding: 1em;
+    text-decoration:none;
+    display:inline-block;
+    font-weight: bold;
+    font-size: 1em;
+    color: #FFFFFF;
+    border-radius:4px;
+    background-color: #4ADB91;
+    text-transform: uppercase;
+  }
+  .ui.button.submit-button:hover {
+    background-color: #28ca77;
+    color: #FFFFFF;
+  }
+  .field.input {
+    width: $input-width;
+    margin-top: 20px;
+    .ui.input input{
+      border: 1px solid #D6D6D6;
+      border-radius: 4px;
+      padding: 1em;
+    }
+  }
+  .ui.header.custom-header {
+    margin-bottom: 30px;
+    text-align: center;
+    &-no-logo {
+      text-align: center;
+    }
+    &-long {
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  .ui.form .field {
+    margin-bottom: 0;
+  }
+  .secondary-action {
+    margin-top: 20px;
+    color: #343434;
+    font-size: 1.1em;
+    font-weight: bold;
+    &:first-of-type {
+      margin-top: 50px;
+    }
+  }
+  .custom-image-style {
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+  .input-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .ui.message {
+    text-align: center;
+  }
+}

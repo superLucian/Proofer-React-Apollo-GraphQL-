@@ -1,0 +1,252 @@
+@import 'variables';
+
+@import 'font';
+
+body{
+  background-color:	#FCFDFF;
+  font-family: Nunito Sans, sans-serif;
+  font-weight: normal;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+audio, video {
+  width: 100%;
+  height: auto;
+}
+
+img {
+	max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit
+}
+
+.resize-none {
+  resize: none;
+}
+
+.no-padding {
+  padding: 0!important;
+}
+
+.no-margin {
+  margin: 0!important;
+}
+
+.padding-t-10 {
+  padding-top: 10px;
+}
+
+.thin {
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.success {
+  color: #4ADB91;
+}
+
+.page-wrapper {
+  margin-left: $sidebar-width;
+  margin-top: $header-height;
+  transition: .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.sidebar-compact {
+  .page-wrapper {
+    margin-left: $vertical-menu + $sidebar-compact + $sidebar-expand-btn;
+  }
+}
+
+.ui.menu {
+  font-family: Nunito Sans, sans-serif;
+  font-weight: 100;
+}
+
+.ui.button {
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: .58571429em 1.1em .58571429em;
+  margin: 0 4px;
+  .loader-wrapper {
+    padding: 0;
+    overflow: hidden;
+    .loading {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &.success {
+    background-color: #4ADB91;
+    border: 2px solid #4ADB91;
+    &:hover {
+      color: #c0efd7;
+    }
+  }
+  &.success.empty {
+    color: #4ADB91;
+    background-color: #ffffff;
+    &:hover {
+      background-color: #4ADB91;
+      color: #ffffff;
+    }
+  }
+  &.warning {
+    background-color: #F5A623;
+    border: 2px solid #F5A623;
+  }
+  &.warning.empty {
+    color: #F5A623;
+    background-color: #ffffff;
+    &:hover {
+      background-color: #F5A623;
+      color: #ffffff;
+    }
+  }
+}
+
+/* Icon colors */
+i.icon.red {
+  color: #FC3E48!important;
+}
+
+.ui.selection.dropdown {
+  height: 36px;
+  line-height: 1.3;
+  border: 1px solid #D6D6D6;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+  font-size: 0.9em;
+  color: #000000;
+  min-width: 10em;
+  & > .default.text {
+    color: #000000;
+  }
+  .menu {
+    & > .item {
+      font-size: 0.9em;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-wrapper {
+    margin-left: 0;
+    padding: 0 0 10px 0;
+    margin-top: 0;
+    transition: .3s cubic-bezier(0, 0, .2, 1);
+    .ui.centered.grid.calendar-page {
+      .ui.centered.grid>.column:not(.aligned):not(.justified):not(.row) {
+        width: 100%!important;
+      }
+    }
+  }
+  .post-item {
+    .post-date {
+      left: -130px;
+      font-size: 1em;
+    }
+    .post-item-wrapper {
+      .post-item-datetime {
+        width: 80px;
+        font-size: 1.1em;
+      }
+    }
+    .empty-item {
+      .nothing-item-content {
+        .nothing-empty {
+          min-width: 1em;
+        }
+        .nothing-text {
+          font-size: 0.9em;
+          padding-top: 2px;
+        }
+        .nothing-actions {
+          font-size: 0.9em;
+          .ui.button {
+            padding: .58571429em 0.8em .58571429em
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .page-wrapper {
+    margin-left: 0;
+    padding: 0 0 10px 0;
+    margin-top: 0;
+    transition: .3s cubic-bezier(0, 0, .2, 1);
+    .ui.centered.grid.calendar-page {
+      .ui.centered.grid>.column:not(.aligned):not(.justified):not(.row) {
+        width: 100%!important;
+      }
+    }
+    &.top-bar.ui.fixed.menu .ui.statistics {
+      display: none;
+    }
+  }
+  .sidebar-compact {
+    .page-wrapper {
+      margin-left: 0!important;
+      margin-right: 0!important;
+    }
+  }
+  .sidebar-container {
+    display: none;
+    float: none!important;
+    right: 0;
+    z-index: 10;
+    left: auto!important;
+    padding-right: 0!important;
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+    &.open {
+      display: block;
+    }
+    .sidebar-wrapper {
+      float: right;
+      width: 80%!important;
+    }
+    .sidebar-header {
+      svg {
+        display: none;
+      }
+      i.icon {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        color: #51DA93;
+      }
+    }
+    .ui.menu.sidebar-menu {
+      .item {
+        font-size: 1.3em!important;
+        padding-left: 0.8em!important;
+      }
+    }
+  }
+}
+
+
+.ui.modal>.close{
+  top: .5rem !important;
+  right: .5rem !important;
+  color: #CFCFCF!important;
+  font-size: 1em!important;
+}

@@ -1,0 +1,9 @@
+query postListSocialProfile ($id: ID!) {
+  socialProfile(id: $id) {
+    id
+    name
+    socialNetwork
+    profilePicture
+    facebookPageName
+  }
+}

@@ -1,0 +1,6 @@
+mutation sendPasswordReset($input: SendPasswordResetInput!) {
+  sendPasswordReset(input: $input) {
+    emailSent
+    tokenLifetime
+  }
+}

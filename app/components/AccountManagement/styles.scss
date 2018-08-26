@@ -1,0 +1,47 @@
+.page-wrapper.account-management {
+    margin-left: 200px;
+    padding: 0px 0px 10px 20px;
+    overflow: hidden;
+    min-height: calc(100vh - 59px);
+}
+.input-label{
+padding-top:7px;
+padding-bottom:7px;
+}
+.demo{
+  padding-right:25px
+}
+.ui.icon.button.edit-content{
+  background-color:#e65a17;
+  border-radius:50%;
+  color:white;
+}
+.ui.icon.button.save-content{
+  background-color:#008000;
+  color:white;
+  border-radius:50%;
+}
+#upmodal{
+margin-top:-180px!important;
+    margin-left: -207px;
+}
+#modal_center{
+text-align:center!important;
+}
+.dimmer {
+background: #000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#close{
+    margin-top: 25px!important;
+    margin-right: 29px!important;
+    color: #db2828!important;
+}
+.cursor{
+cursor: pointer;
+}

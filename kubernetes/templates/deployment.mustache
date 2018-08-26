@@ -1,0 +1,109 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: frontend-react{{#tag}}-{{tag}}{{/tag}}
+spec:
+  replicas: {{number_of_replicas}}
+  template:
+    metadata:
+      labels:
+        name: frontend-react{{#tag}}-{{tag}}{{/tag}}
+        microservice: frontend
+        
+    spec:
+      containers:
+        - name: react
+          image: {{containers.react.image_name}}{{revision}}
+          imagePullPolicy: {{image_pull_policy}}
+          
+          env:
+            - name: nodeEnv
+              value: {{node_env}}
+            - name: NODE_ENV
+              value: {{node_env}}
+
+          ports:
+            {{#containers.react.ports}}
+            - containerPort: {{containerPort}}
+            {{/containers.react.ports}}
+
+          readinessProbe:
+            httpGet:
+              path: /static/health-check
+              port: 3000
+            initialDelaySeconds: 15
+            periodSeconds: 3
+            timeoutSeconds: 5
+
+          livenessProbe:
+            httpGet:
+              path: /static/health-check
+              port: 3000
+            initialDelaySeconds: 15
+            periodSeconds: 3
+            timeoutSeconds: 20
+
+          {{#containers.react.resourceRequests}}
+          resources:
+            {{#requests}}
+            requests:
+              {{#memory}}
+              memory: {{.}}
+              {{/memory}}
+              {{#cpu}}
+              cpu: {{.}}
+              {{/cpu}}
+            {{/requests}}
+            {{#limits}}
+            limits:
+              {{#memory}}
+              memory: {{.}}
+              {{/memory}}
+              {{#cpu}}
+              cpu: {{.}}
+              {{/cpu}}
+            {{/limits}}
+          {{/containers.react.resourceRequests}}
+
+        {{#containers.nginx}}
+        - name: nginx
+          image: {{containers.nginx.image_name}}
+          imagePullPolicy: {{image_pull_policy}}
+          ports:
+            - containerPort: 80
+
+          readinessProbe:
+            exec: { command: [ cat, /var/www/sites/frontend/var/healthy ] }
+            initialDelaySeconds: 1
+            periodSeconds: 1
+
+          livenessProbe:
+            httpGet:
+              path: /app/health-nginx
+              port: 80
+              httpHeaders:
+                - name: Host
+                  value: proofer.io
+            initialDelaySeconds: 15
+            periodSeconds: 3
+            timeoutSeconds: 3
+
+        {{/containers.nginx}}
+
+      {{#volumes}}
+      volumes:
+        - name: react-volume
+          {{#react-volume.hostPath}}
+          hostPath:
+            path: {{react-volume.hostPath}}
+          {{/react-volume.hostPath}}
+      {{/volumes}}
+
+      hostAliases:
+      {{#host_aliases}}
+        - ip: {{ip}}
+          hostnames:
+            {{#hostnames}}
+            - {{.}}
+            {{/hostnames}}
+      {{/host_aliases}}

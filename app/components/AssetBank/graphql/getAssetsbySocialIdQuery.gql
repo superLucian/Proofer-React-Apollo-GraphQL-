@@ -1,0 +1,10 @@
+query getAssets ($profileIds: [ID]) {
+  media_find (profileIds: $profileIds) {
+    edges {
+      node {
+        id
+        url
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+query contentSchedules_find ($calendarSlotIds: [ID], $categoryIds: [ID], $profileIds: [ID]) {
+  contentSchedules_find(calendarSlotIds: $calendarSlotIds, categoryIds: $categoryIds, profileIds: $profileIds) {
+    edges {
+      node {
+        id
+        type
+        publishAt
+        socialProfile {
+          id
+          name
+          socialNetwork
+        }
+        status{
+          ...on TwitterStatus {
+            retweetCount
+            favouriteCount
+          }
+        }
+        publishingStatus
+        moderationStatus
+        content {
+          id
+          text
+          inBank
+          evergreen
+          published
+          media {
+            id
+            url
+            mime
+          }
+          comments{
+            edges{
+              node{
+                id
+                text
+                createdAt
+                user{
+                  id
+                  firstName
+                  lastName
+                  email
+                }
+              }
+            }
+          }
+        }
+        calendarSlot {
+          id
+          day
+          time
+          type
+        }
+      }
+    }
+  }
+}

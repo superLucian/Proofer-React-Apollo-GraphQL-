@@ -1,0 +1,17 @@
+mutation createTeamRoleInvitation($input: CreateTeamRoleInvitationInput!) {
+  createTeamRoleInvitation(input: $input) {
+	teamRoleInvitation {
+	  id
+	  role
+	  authorUser {
+	    id
+	  }
+	  targetUser {
+		id
+	  }
+	  team {
+		id
+	  }
+	}
+  }
+}

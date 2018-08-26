@@ -1,0 +1,24 @@
+query postPageCalendarSlots ($profileIds: [ID]!, $categoryIds: [ID], $type: CalendarSlotType) {
+  calendarSlots_find(profileIds: $profileIds, categoryIds: $categoryIds, type: $type) {
+    edges {
+      node {
+        id
+        day
+        time
+        type
+        category {
+          name
+          color
+          id
+        }
+        socialProfile {
+          name
+          id
+          socialNetwork
+          facebookPageName
+        }
+        __typename
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.ui.modal.add-asset-modal{
+  >.close {
+    cursor: pointer;
+    position: absolute;
+    top: calc(25px - 1rem);
+    right: calc(25px - 1rem);
+    z-index: 1;
+    opacity: 1;
+    font-size: 1.05em;
+    color: #C4C4C4;
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+  }
+
+  .content{
+    overflow: visible;
+    .ui.segments{
+      border: none;
+      box-shadow: none;
+    }
+
+    .action-btns{
+      button {
+        background-color: #4ADB91;
+        color: #ffffff;
+        border: 2px solid #4ADB91;
+        font-size: 0.8em;
+        font-weight: 900;
+        border-radius: 5px;
+        &:hover{
+          background-color: #4ADB91;
+        }
+        &.btn-cancel{
+          background: #ffffff;
+          color: #4ADB91;
+        }
+      }
+    }
+  }
+}

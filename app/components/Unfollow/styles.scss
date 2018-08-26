@@ -1,0 +1,26 @@
+.page-wrapper.unfollow-page .unfollow-wrapper {
+  display: flex;
+  padding-left: 50px;
+  .title {
+    font-size: 2.5em;
+    line-height: 1.25em;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  .ui.pagination.menu {
+    margin: 1em 0;
+  }
+  .just-unfollowed {
+    opacity: 0.2;
+    transition: opacity 0.5s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .not-following {
+    .ui.grid {
+      margin-top: 5px;
+    }
+  }
+}

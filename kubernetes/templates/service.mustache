@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-react{{#tag}}-{{tag}}{{/tag}}
+spec:
+  type: NodePort
+  selector:
+    name: frontend-react{{#tag}}-{{tag}}{{/tag}}
+  ports:
+    {{#service.ports}}
+    - name: {{name}}
+      port: {{port}}
+      targetPort: {{targetPort}}
+    {{/service.ports}}

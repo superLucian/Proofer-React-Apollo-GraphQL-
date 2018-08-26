@@ -1,0 +1,18 @@
+mutation editTeamRole($input: EditTeamRoleInput!) {
+  editTeamRole(input: $input) {
+    teamRole {
+      id
+      role
+      user {
+        id
+        email
+        firstName
+        lastName
+      }
+      team {
+        id
+        name
+      }
+    }
+  }
+}

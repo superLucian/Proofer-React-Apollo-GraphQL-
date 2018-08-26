@@ -1,0 +1,149 @@
+#posts-container {
+  margin: 0!important;
+}
+#posts-wrapper {
+  margin-top: 3em!important;
+}
+.page-wrapper.posts-page {
+  .loader-wrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+}
+
+.select-month {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  font-weight: 900;
+  line-height: 1.3em;
+  i.triangle {
+    color: #4ADB91;
+    font-size: 1.3em;
+    cursor: pointer;
+  }
+  .month-label {
+    padding: 0;
+    text-align: center;
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ui.column.grid>[class*="ten wide"].column, .ui.grid>.column.row>[class*="ten wide"].column, .ui.grid>.row>[class*="ten wide"].column, .ui.grid>[class*="ten wide"].column {
+    width: 80%!important;
+    padding: 0;
+    #sticky-grid {
+      display: none;
+    }
+  }
+  .ui.centered.grid, .ui.centered.grid>.row, .ui.grid>.centered.row {
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .ui.column.grid>[class*="ten wide"].column, .ui.grid>.column.row>[class*="ten wide"].column, .ui.grid>.row>[class*="ten wide"].column, .ui.grid>[class*="ten wide"].column {
+    width: 100%!important;
+    padding: 0;
+    #sticky-grid {
+      display: none;
+    }
+    #posts-wrapper {
+      .post-item {
+        .post-date {
+          position: relative;
+          left: auto;
+          display: flex;
+          margin-left: 0.5em;
+          font-size: 1em;
+          & > div {
+            margin-right: 4px;
+          }
+        }
+        .post-item-wrapper {
+          background-color: #fcfdff;
+          display: block;
+          position: relative;
+          border: none;
+          padding-top: 3em;
+          &:focus {
+            box-shadow: none;
+            outline: none;
+          }
+          &.empty-item {
+            padding-top: 0;
+            .nothing-item-content {
+              .nothing-empty {
+                width: 0;
+                min-width: 0;
+                flex: 0.1;
+              }
+            }
+          }
+          .nothing-item-content {
+            flex: 1;
+            .nothing-text {
+              flex: 0.7;
+              padding-top: 0;
+            }
+            .nothing-actions {
+              flex: 0.3;
+              padding-right: 0;
+              text-align: left;
+
+              .goto-calendar {
+                border: none;
+                background-color: transparent;
+                text-decoration: underline;
+              }
+              .create-post {
+                display: none;
+              }
+            }
+          }
+        }
+        .post-item-datetime {
+          display: flex;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          text-align: left;
+          font-size: 0.9em;
+          padding-left: 1em;
+          & > div {
+            display: inline-block;
+            margin-right: 4px;
+          }
+          .date-time-label {
+            margin-left: 0.5em;
+          }
+        }
+        .weather-tab {
+          background: transparent;
+        }
+        .post-item-content {
+          border-top: 1px solid #D6D6D6;
+          border-bottom: 1px solid #D6D6D6;
+          border-right: 1px solid #D6D6D6;
+          background: white;
+        }
+      }
+    }
+  }
+  .sidebar-compact {
+    .page-wrapper {
+      margin-left: 0!important;
+    }
+  }
+}
+
+.ui.small.modal.post-item{
+  .scrolling.content {
+    padding: 0!important;
+    overflow: visible;
+  }
+}

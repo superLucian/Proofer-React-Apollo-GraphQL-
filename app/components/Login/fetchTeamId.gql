@@ -1,0 +1,25 @@
+query meLogin{
+  me {
+    firstName
+	  id
+    teams {
+      edges {
+        node {
+          id
+          name
+          socialProfiles{
+            edges{
+              node{
+                id
+                name
+                socialNetwork
+                profilePicture
+                facebookPageName
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

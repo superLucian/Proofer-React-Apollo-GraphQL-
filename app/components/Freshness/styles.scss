@@ -1,0 +1,43 @@
+.pr-progress {
+  width: 3.5em;
+  margin: 0 0.5em;
+  padding-top: 4px;
+
+  &.green .CircularProgressbar-path {
+    //stroke: url(#green-grad);
+    stroke: #2AE299;
+  }
+  &.red .CircularProgressbar-path {
+    //stroke: url(#red-grad);
+    stroke: red;
+  }
+
+  .CircularProgressbar-path {
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s ease 0s;
+  }
+  .CircularProgressbar-trail {
+    //stroke: url(#grey-grad);
+    stroke: #BDBDBD;
+
+  }
+  .CircularProgressbar-text {
+    fill: #000000;
+    font-size: 4em;
+    font-weight: 300;
+    dominant-baseline: central;
+    text-anchor: middle;
+  }
+  .CircularProgressbar-background {
+    fill: #d6d6d6;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pr-progress {
+    width: 2.5em;
+  }
+  .CircularProgressbar-text {
+    font-size: 3em;
+  }
+}

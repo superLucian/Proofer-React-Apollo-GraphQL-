@@ -1,0 +1,20 @@
+query fetchTeamRoles($id: ID!) {
+  team(id: $id) {
+    id
+    name
+    teamRoles {
+      edges {
+        node {
+          id
+          role
+          user {
+            id
+            email
+            firstName
+            lastName
+          }
+        }
+      }
+    }
+  }
+}

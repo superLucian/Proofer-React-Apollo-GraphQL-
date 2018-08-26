@@ -1,0 +1,58 @@
+.image-grid-wrapper {
+  $height: 300px;
+  overflow: hidden;
+  .ui.grid {
+    margin: 0;
+    .column {
+      padding: 0;
+      height: $height;
+      width: 100%;
+      .row {
+        height: inherit;
+        position: relative;
+        &:not(:first-child) {
+          margin-top: 1px;
+        }
+      }
+      img {
+        height: inherit;
+        width: 100%;
+        object-fit: cover;
+        &:nth-child(1) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &:not(.count1) {
+    .ui.grid {
+      .column:first-child {
+        padding-right: 1px;
+      }
+    }
+  }
+  &.count3 {
+    .ui.grid {
+      .column{
+        &:nth-child(1) {
+          width: 66%
+        }
+        &:nth-child(2) {
+          width: 34%;
+        }
+      }
+    }
+  }
+  &.count4 {
+    .ui.grid {
+      .column {
+        &:nth-child(1) {
+          width: 75%
+        }
+        &:nth-child(2) {
+          width: 25%;
+        }
+      }
+    }
+  }
+}

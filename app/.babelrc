@@ -1,0 +1,35 @@
+{
+  "env": {
+    "development": {
+      "presets": "next/babel",
+      "plugins": [["inline-dotenv", {
+        "path": ".env-development"
+      }]]
+    },
+    "production": {
+      "presets": "next/babel",
+      "plugins": [["inline-dotenv", {
+        "path": ".env-production"
+      }]]
+    },
+    "test": {
+      "presets": [
+        ["env", {
+          "modules": "commonjs"
+        }],
+        "next/babel"
+      ]
+    }
+  },
+  "plugins": [
+    "babel-plugin-inline-import-graphql-ast",
+    "inline-react-svg",
+    [
+      "transform-assets-import-to-string",
+      {
+        "baseDir": "static",
+        "baseUri": "/"
+      }
+    ]
+  ]
+}

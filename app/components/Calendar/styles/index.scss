@@ -1,0 +1,476 @@
+.calendar-page {
+  margin: 0!important;
+}
+
+.calendar-weeks {
+  width: 100%;
+  border-bottom: 1px solid #D6D6D6;
+  .weeks-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em 2em;
+    .weeks-actions {
+      width: 20%;
+    }
+    .weeks-date {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.3em;
+      i.icon {
+        color: #4ADB91;
+        padding: 0 2em;
+        font-size: 1.5em;
+        padding-top: 0.15em;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.ui.table.calendar-table {
+  height: 100%;
+  width: 100%;
+  overflow-x: auto;
+  min-height: 0.01%;
+  padding: 0px 20px 0 0!important;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-collapse: separate;
+  border-spacing: 6px;
+  th, td {
+    position: relative;
+    border: none!important;
+    padding: .58571429em .58571429em!important;
+    &:last-child {
+      padding-right: 0.785714em!important;
+    }
+    &:hover {
+      cursor: pointer;
+      .remove-icon {
+        display: block;
+      }
+    }
+  }
+  .calendar-header {
+    tr {
+      th {
+        font-size: 1.3em;
+        .weekday, .digit {
+          font-family: "Nunito Sans";
+          font-size: 18px;
+          font-weight: 300;
+          line-height: 40px;
+        }
+        .weekday {
+
+        }
+        .digit {
+          font-weight: 100;
+        }
+      }
+    }
+  }
+  .remove-icon {
+    display: none;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
+  .calendar-row {
+    .calendar-time-cell {
+      width: 120px;
+      max-width: 120px!important;
+      text-align: center;
+      .rc-time-picker input {
+        border: none;
+        margin-top: 0.5em;
+        text-align: center;
+        font-size: 1.4em;
+        font-weight: bold;
+        &:hover {
+          color: #539af7;
+          cursor: pointer;
+        }
+      }
+      .icon, .time {
+        display: block;
+      }
+      .icon.remove-icon-row {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        font-size: 1em;
+        color: #CECECE;
+        display: none;
+      }
+      .icon {
+        font-size: 1.2em;
+      }
+      .time {
+        font-size: 20px;
+      }
+      &:hover {
+        .icon.remove-icon-row {
+          display: block;
+        }
+      }
+    }
+    .calendar-cell {
+      height: 100px;
+      min-height: 100px;
+      max-height: 100px;
+      width: 100px;
+      max-width: 100px;
+      min-width: 100px;
+      border-radius: 5px;
+      border: 1px solid #D6D6D6!important;
+      &.no-border {
+        border: none!important;
+      }
+      .category-label {
+        width: 75px;
+        border-radius: 12px;
+        text-align: center;
+        font-size: 0.8em;
+        font-weight: 900;
+        line-height: 2.1;
+        margin: auto;
+        .category-label-name {
+          padding: 0.25em;
+          line-height: 1.5;
+          border-radius: 50px;
+          word-break: break-word;
+          width: 100%;
+          display: block;
+        }
+      }
+      .addcategory-label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        i.icon {
+          font-size: 2em;
+          color: #5AED88;
+          margin: 0;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+.quality-post-popup {
+  background-color: rgba(255,255,255,0.7);
+  .quality-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    div {
+      font-size: 0.85em;
+      text-align: center;
+      padding: 0 0.5em;
+      height: 50px;
+      b, i, svg {
+        display: block;
+        margin: 0 auto;
+      }
+      i {
+        color: #5AED88;
+        font-size: 2em;
+        margin-top: 0.25em;
+      }
+    }
+  }
+  button {
+    display: block!important;
+    margin: 0 auto!important;
+    margin-top: 1em!important;
+  }
+}
+
+.add-category-popup {
+  .add-category-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 6px;
+    max-height: 120px;
+    overflow-y: auto;
+    .add-category-item {
+      font-size: 1.1em;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      margin: 3px 0;
+      padding: 6px;
+      cursor: pointer;
+      &:hover {
+        background-color: #f1f1f1;
+      }
+      .add-category-color {
+        height: 24px;
+        width: 4px;
+        margin-right: 0.5em;
+        border-radius: 5px;
+        background-color: #E2E2E2;
+      }
+    }
+  }
+
+  .add-category {
+    .icon {
+      font-size: 2em;
+      margin-top: 4px;
+    }
+  }
+
+  .category-name-input {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom:10px;
+    padding: 12px 12px;
+    outline:none;
+    border:2px;
+    align-items: center;
+    border-radius: 3px;
+  }
+
+  button.ui.button.savecategory-button{
+    color:white;
+    background-color: darkturquoise;
+    font-size: 1em;
+  }
+  .category-color-view {
+    padding: 6px 0;
+    .category-color-picker{
+      padding-bottom: 12px;
+      width: 250px;
+      float: left;
+      .category-button-cell {
+        border: 0px;
+        width: 20px;
+        float: left;
+        margin: 3px;
+        z-index: 5;
+        height: 24px;
+        align-items: center;
+      }
+    }
+  }
+
+  .category-title {
+    margin-bottom: 6px;
+  }
+  button.ui.mini.active.compact.button.category-button-cell:focus {
+    border: 1px solid #1565C0;
+  }
+  .category-color-view{
+      .category-select-color{
+        height:22px;
+        display:flex;
+      }
+  }
+  .category-title{
+      display: block
+  }
+
+  .categoryGrid {
+    margin: 1em;
+    max-width: 95%;
+  }
+  .category-item-view {
+  	background: white;
+    border-radius: 4px;
+    width: 180px;
+    height: 180px;
+    padding: 6px;
+    .category-desc  {
+      width: 100%;
+      padding: 6px;
+      margin-bottom: 6px;
+    }
+    .media-view {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .sidebar-compact .page-wrapper.calendar-wrapper {
+    margin-left: 100px;
+    .ui.grid>[class*="twelve wide computer"].column {
+      width: 100%!important;
+    }
+  }
+  .ui.centered.grid, .ui.centered.grid>.row, .ui.grid>.centered.row {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar-compact .page-wrapper.calendar-wrapper {
+    padding-top: 75px;
+    margin-left: 100px;
+  }
+  .ui.centered.grid>.column:not(.aligned):not(.justified):not(.row), .ui.centered.grid>.row>.column:not(.aligned):not(.justified), .ui.grid .centered.row>.column:not(.aligned):not(.justified) {
+    width: 100%!important;
+  }
+  .calendar-weeks {
+    border: none;
+    .weeks-wrapper {
+      padding: 0;
+      .weeks-actions {
+        display: none;
+      }
+      .weeks-date {
+        width: 100%;
+        text-align: center;
+        i.icon {
+          padding: 0.15em 0;
+          &.left {
+            margin-right: 20%;
+          }
+          &.right {
+            margin-left: 20%;
+          }
+        }
+      }
+    }
+  }
+  .ui[class*="very basic"].table.calendar-table {
+    padding: 0!important;
+    .calendar-header {
+      display: none!important;
+    }
+    tr {
+      border: none!important;
+      box-shadow: none!important;
+      td {
+        display: inline-block!important;
+      }
+    }
+    .calendar-row {
+      .calendar-time-cell {
+        padding: 0!important;
+        max-width: 50px!important;
+        font-size: 0.75em;
+        .image {
+          height: 20px;
+        }
+        .rc-time-picker {
+          input {
+            margin-top: 0;
+          }
+        }
+      }
+      .calendar-cell {
+        height: 70px!important;
+        min-height: 70px;
+        max-height: 70px;
+        width: 70px!important;
+        min-width: 70px;
+        max-width: 70px;
+        margin: 1px;
+        display: inline-flex!important;
+        align-items: center;
+        justify-content: center;
+        .addcategory-label {
+          flex-direction: row;
+          height: 60px;
+          text-align: center;
+          justify-content: center;
+        }
+        .category-label {
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .sidebar-compact .page-wrapper.calendar-wrapper {
+    margin-right: 0px;
+  }
+  .ui.centered.grid>.column:not(.aligned):not(.justified):not(.row), .ui.centered.grid>.row>.column:not(.aligned):not(.justified), .ui.grid .centered.row>.column:not(.aligned):not(.justified) {
+    width: 100%!important;
+  }
+  .calendar-weeks {
+    border: none;
+    .weeks-wrapper {
+      padding: 0;
+      .weeks-actions {
+        display: none;
+      }
+      .weeks-date {
+        width: 100%;
+        text-align: center;
+        i.icon {
+          padding: 0.15em 0;
+          &.left {
+            margin-right: 20%;
+          }
+          &.right {
+            margin-left: 20%;
+          }
+        }
+      }
+    }
+  }
+  .ui[class*="very basic"].table.calendar-table {
+    padding: 0!important;
+    .calendar-header {
+      display: none!important;
+    }
+    tr {
+      border: none!important;
+      box-shadow: none!important;
+      td {
+        display: inline-block!important;
+      }
+    }
+    .calendar-row {
+      .calendar-time-cell {
+        padding: 0!important;
+        max-width: 20%!important;
+        font-size: 0.75em;
+        .image {
+          height: 20px;
+        }
+        .rc-time-picker {
+          input {
+            margin-top: 0;
+          }
+        }
+      }
+      .calendar-cell {
+        height: 60px;
+        width: 80%!important;
+        max-width: 80%;
+        margin: 0;
+        display: inline-flex!important;
+        align-items: center;
+        justify-content: center;
+        .addcategory-label {
+          flex-direction: row;
+          height: 80px;
+          text-align: center;
+          justify-content: center;
+        }
+        .category-label {
+
+        }
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  padding: 0;
+  .item {
+    padding: 0.35em;
+  }
+}

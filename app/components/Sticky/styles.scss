@@ -1,0 +1,11 @@
+.page-wrapper.posts-page {
+  #sticky {
+    width: calc(62.5% - 162px)!important;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    .scroll-sticky-header {
+      border-radius: 4px;
+    }
+  }
+}

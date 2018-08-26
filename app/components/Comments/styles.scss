@@ -1,0 +1,21 @@
+.ui.grid.content-comments {
+  .comments-list {
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+  .reply-form {
+    padding: 10px 0 0;
+    border-top: 1px solid rgba(34,36,38,.15);
+    .ui.form {
+      width: 100%;
+  
+      input, div, textarea {
+        display: inline-block;
+        border: none;
+        padding: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+}
